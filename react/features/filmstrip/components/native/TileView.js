@@ -213,11 +213,11 @@ class TileView extends PureComponent<Props> {
                         bounces = { false }
                         contentContainerStyle = { this._contentContainerStyles }
                         data = { participants }
-                        horizontal = { false }
+                        horizontal = { true }
+                        pagingEnabled={ true }
                         initialNumToRender = { initialRowsToRender }
                         key = { _columns }
                         keyExtractor = { this._keyExtractor }
-                        numColumns = { _columns }
                         onViewableItemsChanged = { this._onViewableItemsChanged }
                         renderItem = { this._renderThumbnail }
                         showsHorizontalScrollIndicator = { false }
@@ -259,12 +259,13 @@ class TileView extends PureComponent<Props> {
      * @returns {ReactElement}
      */
     _renderThumbnail({ item/* , index , separators */ }) {
-        const { _thumbnailHeight } = this.props;
+        const { _width, _height } = this.props;
 
         return (
             <Thumbnail
                 disableTint = { true }
-                height = { _thumbnailHeight }
+                height = { _height }
+                width = { _width }
                 key = { item }
                 participantID = { item }
                 renderDisplayName = { true }

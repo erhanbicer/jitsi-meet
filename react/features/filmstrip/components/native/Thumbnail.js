@@ -1,7 +1,7 @@
 // @flow
 
 import React, { PureComponent } from 'react';
-import { View } from 'react-native';
+import {Dimensions, View} from 'react-native';
 import type { Dispatch } from 'redux';
 
 import { ColorSchemeRegistry } from '../../../base/color-scheme';
@@ -119,6 +119,11 @@ type Props = {
      * The height of the thumnail.
      */
     height: ?number,
+
+    /**
+     * The width of the thumnail.
+     */
+    width: ?number,
 
     /**
      * The ID of the participant related to the thumbnail.
@@ -257,6 +262,7 @@ class Thumbnail extends PureComponent<Props> {
             _styles,
             disableTint,
             height,
+            width,
             tileView
         } = this.props;
         const styleOverrides = tileView ? {
@@ -265,7 +271,7 @@ class Thumbnail extends PureComponent<Props> {
             height,
             maxHeight: null,
             maxWidth: null,
-            width: null
+            width
         } : null;
 
         return (
@@ -277,7 +283,8 @@ class Thumbnail extends PureComponent<Props> {
                     _pinned && !tileView ? _styles.thumbnailPinned : null,
                     styleOverrides,
                     _raisedHand ? styles.thumbnailRaisedHand : null,
-                    _renderDominantSpeakerIndicator ? styles.thumbnailDominantSpeaker : null
+                    _renderDominantSpeakerIndicator ? styles.thumbnailDominantSpeaker : null,
+                    { margin: 0 }
                 ] }
                 touchFeedback = { false }>
                 <ParticipantView
