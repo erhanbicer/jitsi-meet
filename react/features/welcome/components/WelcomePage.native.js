@@ -16,7 +16,7 @@ import { ColorSchemeRegistry } from '../../base/color-scheme';
 import { translate } from '../../base/i18n';
 import { Icon, IconMenu, IconWarning } from '../../base/icons';
 import JitsiStatusBar from '../../base/modal/components/JitsiStatusBar';
-import { LoadingIndicator, Text } from '../../base/react';
+import {Image, LoadingIndicator, Text} from '../../base/react';
 import { connect } from '../../base/redux';
 import BaseTheme from '../../base/ui/components/BaseTheme';
 import WelcomePageTabs
@@ -106,6 +106,7 @@ class WelcomePage extends AbstractWelcomePage<*> {
 
         navigation.setOptions({
             headerLeft: () => (
+              <View style = { styles.drawerNavigationContainer }>
                 <TouchableOpacity
                     /* eslint-disable-next-line react/jsx-no-bind */
                     onPress = { () =>
@@ -117,6 +118,10 @@ class WelcomePage extends AbstractWelcomePage<*> {
                         src = { IconMenu }
                         style = { _headerStyles.headerButtonIcon } />
                 </TouchableOpacity>
+                <Image
+                  src = { require('../../../../images/bip_logo.png') }
+                  style = { _headerStyles.headerBiPLogo } />
+              </View>
             ),
             // eslint-disable-next-line react/no-multi-comp
             headerRight: () =>

@@ -202,6 +202,12 @@ export default {
         width: BaseTheme.spacing[6]
     },
 
+    drawerNavigationContainer: {
+        flexDirection: 'row',
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+
     /**
      * The container of the label of the audio-video switch.
      */

@@ -4,6 +4,7 @@ import { StyleSheet } from 'react-native';
 
 import { ColorSchemeRegistry, schemeColor } from '../../../color-scheme';
 import { BoxModel } from '../../../styles';
+import * as BaseTheme from "../../../ui/Tokens";
 
 const HEADER_FONT_SIZE = 18;
 const HEADER_HEIGHT = 48;
@@ -32,6 +33,11 @@ ColorSchemeRegistry.register('Header', {
     headerButtonText: {
         color: schemeColor('text'),
         fontSize: HEADER_FONT_SIZE
+    },
+
+    headerBiPLogo: {
+        height: BaseTheme.spacing[5],
+        width: BaseTheme.spacing[5]
     },
 
     /**
