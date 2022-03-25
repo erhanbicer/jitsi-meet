@@ -11,7 +11,7 @@ export default createStyleSheet({
      */
     emptyListText: {
         backgroundColor: 'transparent',
-        color: 'rgba(255, 255, 255, 0.6)',
+        color: ColorPalette.darkGrey,
         textAlign: 'center'
     },
 

@@ -13,7 +13,7 @@ const DRAWER_HEADER_HEIGHT = 220;
 
 export const SWITCH_THUMB_COLOR = BaseTheme.palette.action04;
 
-export const SWITCH_UNDER_COLOR = BaseTheme.palette.video01Disabled;
+export const SWITCH_UNDER_COLOR = BaseTheme.colors.backdrop;
 
 /**
  * The default color of text on the WelcomePage.
