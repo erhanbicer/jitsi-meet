@@ -5,7 +5,7 @@ import { StyleSheet } from 'react-native';
 import { BoxModel } from '../../base/styles';
 import BaseTheme from '../../base/ui/components/BaseTheme.native';
 
-export const PLACEHOLDER_TEXT_COLOR = BaseTheme.palette.text01;
+export const PLACEHOLDER_TEXT_COLOR = BaseTheme.palette.text06;
 
 export const DRAWER_AVATAR_SIZE = 104;
 
@@ -18,7 +18,7 @@ export const SWITCH_UNDER_COLOR = BaseTheme.palette.video01Disabled;
 /**
  * The default color of text on the WelcomePage.
  */
-const TEXT_COLOR = BaseTheme.palette.text01;
+const TEXT_COLOR = BaseTheme.palette.text06;
 
 /**
  * The styles of the React {@code Components} of the feature welcome including
@@ -117,6 +117,7 @@ export default {
      * The text of the hint box.
      */
     hintText: {
+        color: BaseTheme.palette.text01,
         textAlign: 'center'
     },
 
@@ -143,7 +144,7 @@ export default {
     },
 
     messageContainer: {
-        backgroundColor: BaseTheme.palette.ui12,
+        backgroundColor: BaseTheme.palette.ui05,
         borderColor: BaseTheme.palette.field02,
         borderRadius: 4,
         borderWidth: 1,
@@ -213,7 +214,7 @@ export default {
      */
     textInput: {
         backgroundColor: 'transparent',
-        borderColor: BaseTheme.palette.field02,
+        borderColor: BaseTheme.palette.field01,
         borderRadius: 4,
         borderWidth: 1,
         color: TEXT_COLOR,
@@ -254,19 +255,19 @@ export default {
      * The style of the top-level container of {@code WelcomePage}.
      */
     welcomePage: {
-        backgroundColor: BaseTheme.palette.uiBackground,
+        backgroundColor: BaseTheme.palette.surface00,
         flex: 1,
         overflow: 'hidden'
     },
 
     recentList: {
-        backgroundColor: BaseTheme.palette.uiBackground,
+        backgroundColor: BaseTheme.palette.surface00,
         flex: 1,
         overflow: 'hidden'
     },
 
     recentListDisabled: {
-        backgroundColor: BaseTheme.palette.uiBackground,
+        backgroundColor: BaseTheme.palette.surface00,
         flex: 1,
         opacity: 0.8,
         overflow: 'hidden'

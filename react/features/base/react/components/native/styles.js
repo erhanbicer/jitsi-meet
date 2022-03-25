@@ -3,7 +3,7 @@
 import { BoxModel, ColorPalette } from '../../../styles';
 import BaseTheme from '../../../ui/components/BaseTheme.native';
 
-const OVERLAY_FONT_COLOR = 'rgba(255, 255, 255, 0.6)';
+const OVERLAY_FONT_COLOR = 'rgba(0, 0, 0, 0.6)';
 const SECONDARY_ACTION_BUTTON_SIZE = 30;
 
 export const AVATAR_SIZE = 65;
@@ -154,7 +154,7 @@ const SECTION_LIST_STYLES = {
 
     listSection: {
         alignItems: 'center',
-        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+        backgroundColor: 'rgba(0, 0, 0, 0.2)',
         flex: 1,
         flexDirection: 'row',
         paddingVertical: 5,
